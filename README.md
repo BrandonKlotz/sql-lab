@@ -30,13 +30,13 @@ Update all ShipRegion to the value EuroZone in the Orders table, where the ShipC
 ```UPDATE orders SET shipcountry='EuroZone' WHERE shipcountry='France';```
 
 Delete all orders from order_details that have quantity of 1.
-```DELETE FROM order_details WHERE quantity=1;
-SELECT * FROM order_details WHERE quantity=1;```
+```DELETE FROM order_details WHERE quantity=1;```
+```SELECT * FROM order_details WHERE quantity=1;```
 
 Calculate the average, max, and min of the quantity at the order details table.
-```SELECT AVG(quantity) FROM order_details;
-SELECT MAX(quantity) FROM order_details;
-SELECT MIN(quantity) FROM order_details;```
+```SELECT AVG(quantity) FROM order_details;```
+```SELECT MAX(quantity) FROM order_details;```
+```SELECT MIN(quantity) FROM order_details;```
 
 Calculate the average, max, and min of the quantity at the order details table,
 grouped by the orderid.
@@ -46,12 +46,12 @@ Find the CustomerID that placed order 10290 (orders table).
 ```SELECT customerid FROM orders WHERE orderid=10290;```
 
 DO an inner join, left join, right join on orders and customer tables.
-```SELECT * FROM orders INNER JOIN customers ON orders.customerid = customers.customerid;
-SELECT * FROM orders LEFT JOIN customers ON orders.customerid = customers.customerid;
-SELECT * FROM orders RIGHT JOIN customers ON orders.customerid = customers.customerid;```
+```SELECT * FROM orders INNER JOIN customers ON orders.customerid = customers.customerid;```
+```SELECT * FROM orders LEFT JOIN customers ON orders.customerid = customers.customerid;```
+```SELECT * FROM orders RIGHT JOIN customers ON orders.customerid = customers.customerid;```
 
-Get employees' firstname for all employees who report to no one.
+Get employees firstname for all employees who report to no one.
 ```SELECT * FROM employees WHERE reportsto IS NULL;```
 
-Get employees' firstname for all employees who report to no one.
+Get employees firstname for all employees who report to no one.
 ```SELECT * FROM employees WHERE reportsto=2;```
